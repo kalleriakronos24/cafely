@@ -1,0 +1,12 @@
+
+GET  http://localhost:3000/fetch HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "Nasi Test",
+    "price" : 9000,
+    "qty" : 0,
+    "desc" : "Nasi Test adalah nasi yang tk",
+    "primary_img" : "1.jpg",
+    "other_img" : ["batsoup.png","buset.jpg"]
+}
