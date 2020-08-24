@@ -3,10 +3,13 @@ import { View, Text, TouchableOpacity } from 'react-native';
 
 import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { os } from '../../globals/global'
 import { useDarkMode } from 'react-native-dark-mode';
+
 const Footer = (props) => {
 	const { navigation } = props;
 	const isDarkMode = useDarkMode();
+
 	return (
 		<View
 			style={{
@@ -21,7 +24,7 @@ const Footer = (props) => {
 				style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
 			>
 				<View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-					<Icon name='md-home-outline' size={26} />
+					<Icon name='md-home' color={'white'} size={26} />
 				</View>
 				<Text
 					style={{
@@ -39,7 +42,7 @@ const Footer = (props) => {
 				style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
 			>
 				<View style={{ width: 26, height: 26 }}>
-					<Icon name='md-heart' color={isDarkMode ? '#B1B1B1' : 'blue'} />
+					<Icon name='md-heart' size={26} color={isDarkMode ? '#B1B1B1' : 'blue'} />
 				</View>
 				<Text
 					style={{
@@ -57,7 +60,7 @@ const Footer = (props) => {
 				style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
 			>
 				<View style={{ width: 26, height: 26 }}>
-					<Icon name='ios-happy' color={isDarkMode ? '#B1B1B1' : 'blue'} />
+					<Icon name='ios-happy' size={26} color={isDarkMode ? '#B1B1B1' : 'blue'} />
 				</View>
 				<Text
 					style={{
@@ -75,7 +78,7 @@ const Footer = (props) => {
 				style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
 			>
 				<View style={{ width: 26, height: 26 }}>
-					<Icon name='md-mail' color={isDarkMode ? '#B1B1B1' : 'blue'} />
+					<Icon name='md-mail' size={26} color={isDarkMode ? '#B1B1B1' : 'blue'} />
 				</View>
 				<Text
 					style={{
@@ -93,7 +96,7 @@ const Footer = (props) => {
 				onPress={() => navigation.navigate('Account')}
 			>
 				<View style={{ width: 26, height: 26 }}>
-					<Icon name='md-person' color={isDarkMode ? '#B1B1B1' : 'blue'} />
+					<Icon name='md-person' size={26} color={isDarkMode ? '#B1B1B1' : 'blue'} />
 				</View>
 				<Text
 					style={{

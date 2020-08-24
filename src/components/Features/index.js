@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import { View, Text, Image, Dimensions } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Icon } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { useDarkMode } from 'react-native-dark-mode';
 const Features = (props) => {
 	let { width, height } = Dimensions.get('window');
@@ -31,7 +31,7 @@ const Features = (props) => {
 							}}
 						>
 							<Icon
-								name='restaurant'
+								name='md-restaurant'
 								size={44}
 								color={isDarkMode ? '#B1B1B1' : 'black'}
 							/>
@@ -64,7 +64,7 @@ const Features = (props) => {
 						}}
 						onPress={() => props.navigation.navigate('Laundry')}
 					>
-						<Icon name='ios-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} type='ionicon' />
+						<Icon name='md-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} />
 					</TouchableOpacity>
 					<Text
 						style={{
@@ -91,7 +91,7 @@ const Features = (props) => {
 							alignItems: 'center'
 						}}
 					>
-						<Icon name='ios-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} type='ionicon' />
+						<Icon name='md-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} />
 					</View>
 					<Text
 						style={{
@@ -118,7 +118,7 @@ const Features = (props) => {
 							alignItems: 'center'
 						}}
 					>
-						<Icon name='ios-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} type='ionicon' />
+						<Icon name='md-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} />
 					</View>
 					<Text
 						style={{
@@ -147,7 +147,7 @@ const Features = (props) => {
 							alignItems: 'center'
 						}}
 					>
-						<Icon name='ios-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} type='ionicon' />
+						<Icon name='md-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} />
 					</View>
 					<Text
 						style={{
@@ -174,7 +174,7 @@ const Features = (props) => {
 							alignItems: 'center'
 						}}
 					>
-						<Icon name='ios-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} type='ionicon' />
+						<Icon name='md-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} />
 					</View>
 					<Text
 						style={{
@@ -201,7 +201,7 @@ const Features = (props) => {
 							alignItems: 'center'
 						}}
 					>
-						<Icon name='ios-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} type='ionicon' />
+						<Icon name='md-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} />
 					</View>
 					<Text
 						style={{
@@ -228,7 +228,7 @@ const Features = (props) => {
 							alignItems: 'center'
 						}}
 					>
-						<Icon name='ios-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} type='ionicon' />
+						<Icon name='md-help' size={44} color={isDarkMode ? '#B1B1B1' : 'black'} />
 					</View>
 					<Text
 						style={{

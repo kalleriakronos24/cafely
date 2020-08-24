@@ -490,8 +490,8 @@ export const Buy = (props) => {
                         )
                 }
 
-
-                <Footer navigation={props.navigation} home_active_link={true} />
+{/* 
+                <Footer navigation={props.navigation} home_active_link={true} /> */}
 
             </View>
         </React.Fragment>

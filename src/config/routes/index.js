@@ -27,7 +27,7 @@ import {
 } from 'react-native';
 const Stack = createStackNavigator();
 import { useSelector, useDispatch } from 'react-redux';
-import { Icon } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Checkout } from '../../pages/Checkout';
 import { ViewWarung } from '../../pages/Warung/View';
 import { Food_Warung } from '../../pages/Warung/Food/index';
@@ -58,6 +58,8 @@ import { Wishlist } from '../../pages/Wishlist';
 import { useDarkMode } from 'react-native-dark-mode';
 import Laundry from '../../pages/Laundry/List';
 import { CartNew } from '../../pages/Misc/cart_renewed';
+
+
 const Router = React.memo((props) => {
 	const count = useSelector((state) => state.CART_COUNT);
 	let view = useSelector((state) => state.CART_ITEMS);
@@ -204,7 +206,7 @@ const Router = React.memo((props) => {
 												<Text style={{ textAlign: 'center', fontSize: 15, marginRight: 2 }}>
 													{count}
 												</Text>
-												<Icon name='ios-cart' color='blue' type='ionicon' />
+												<Icon name='md-cart' color='blue' />
 											</TouchableOpacity>
 										</View>
 									);
@@ -294,10 +296,9 @@ const Router = React.memo((props) => {
 												}}
 											>
 												<Icon
-													name='md-arrow-round-back'
+													name='md-arrow-back'
 													size={25}
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
 												/>
 											</TouchableHighlight>
 										</View>
@@ -320,9 +321,9 @@ const Router = React.memo((props) => {
 												}}
 											>
 												<Icon
-													name='ios-settings'
+													name='md-settings'
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
+													size={25}
 												/>
 											</TouchableOpacity>
 										</View>
@@ -358,10 +359,9 @@ const Router = React.memo((props) => {
 												}}
 											>
 												<Icon
-													name='md-arrow-round-back'
+													name='md-arrow-back'
 													size={25}
 													color='white'
-													type='ionicon'
 												/>
 											</TouchableHighlight>
 										</View>
@@ -390,7 +390,7 @@ const Router = React.memo((props) => {
 													flexDirection: 'row'
 												}}
 											>
-												<Icon name='ios-log-out' size={25} color='white' type='ionicon' />
+												<Icon name='md-log-out' size={25} color='white' />
 											</TouchableOpacity>
 											<TouchableOpacity
 												onLongPress={() =>
@@ -411,7 +411,7 @@ const Router = React.memo((props) => {
 													flexDirection: 'row'
 												}}
 											>
-												<Icon name='md-more' size={25} color='white' type='ionicon' />
+												<Icon name='md-more' size={25} color='white' />
 											</TouchableOpacity>
 										</View>
 									);
@@ -491,7 +491,7 @@ const Router = React.memo((props) => {
 													flexDirection: 'row'
 												}}
 											>
-												<Icon name='md-more' type='ionicon' />
+												<Icon name='md-more' />
 											</TouchableOpacity>
 										</View>
 									);
@@ -538,10 +538,9 @@ const Router = React.memo((props) => {
 														onPress={() => ref.current.goBack()}
 													>
 														<Icon
-															name='ios-close'
+															name='md-close'
 															color={isDarkMode ? 'white' : 'black'}
 															size={35}
-															type='ionicon'
 														/>
 													</TouchableWithoutFeedback>
 												</View>
@@ -580,10 +579,9 @@ const Router = React.memo((props) => {
 												}}
 											>
 												<Icon
-													name='md-arrow-round-back'
+													name='md-arrow-back'
 													size={25}
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
 												/>
 											</TouchableHighlight>
 										</View>
@@ -614,10 +612,9 @@ const Router = React.memo((props) => {
 												}}
 											>
 												<Icon
-													name='ios-search'
+													name='md-search'
 													size={25}
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
 												/>
 											</TouchableOpacity>
 											<TouchableOpacity
@@ -644,10 +641,9 @@ const Router = React.memo((props) => {
 											>
 												<Text style={{ color: isDarkMode ? 'white' : 'black' }}>{count}</Text>
 												<Icon
-													name='ios-cart'
+													name='md-cart'
 													size={25}
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
 												/>
 											</TouchableOpacity>
 										</View>
@@ -683,10 +679,9 @@ const Router = React.memo((props) => {
 												}}
 											>
 												<Icon
-													name='md-arrow-round-back'
+													name='md-arrow-back'
 													size={25}
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
 												/>
 											</TouchableHighlight>
 										</View>
@@ -720,7 +715,6 @@ const Router = React.memo((props) => {
 													name='ios-search'
 													size={25}
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
 												/>
 											</TouchableOpacity>
 											<TouchableOpacity
@@ -748,7 +742,6 @@ const Router = React.memo((props) => {
 													name='md-more'
 													size={25}
 													color={isDarkMode ? 'white' : 'black'}
-													type='ionicon'
 												/>
 											</TouchableOpacity>
 										</View>
@@ -826,7 +819,7 @@ const Router = React.memo((props) => {
 													alignItems: 'center'
 												}}
 											>
-												<Icon name='ios-search' color='blue' type='ionicon' />
+												<Icon name='md-search' color='blue' />
 											</TouchableOpacity>
 											<TouchableOpacity
 												disabled={count > 0 ? false : true}
@@ -845,7 +838,7 @@ const Router = React.memo((props) => {
 												<Text style={{ textAlign: 'center', fontSize: 15, marginRight: 2 }}>
 													{count}
 												</Text>
-												<Icon name='ios-cart' color='blue' type='ionicon' />
+												<Icon name='md-cart' color='blue' />
 											</TouchableOpacity>
 										</View>
 									);
@@ -901,7 +894,7 @@ const Router = React.memo((props) => {
 													alignItems: 'center'
 												}}
 											>
-												<Icon name='ios-search' color='blue' type='ionicon' />
+												<Icon name='ios-search' color='blue' />
 											</TouchableOpacity>
 											<TouchableOpacity
 												disabled={count > 0 ? false : true}
@@ -920,7 +913,7 @@ const Router = React.memo((props) => {
 												<Text style={{ textAlign: 'center', fontSize: 15, marginRight: 2 }}>
 													{count}
 												</Text>
-												<Icon name='ios-cart' color='blue' type='ionicon' />
+												<Icon name='ios-cart' color='blue' />
 											</TouchableOpacity>
 										</View>
 									);
@@ -976,7 +969,7 @@ const Router = React.memo((props) => {
 													alignItems: 'center'
 												}}
 											>
-												<Icon name='ios-search' color='blue' type='ionicon' />
+												<Icon name='ios-search' color='blue' />
 											</TouchableOpacity>
 											<TouchableOpacity
 												disabled={count > 0 ? false : true}
@@ -995,7 +988,7 @@ const Router = React.memo((props) => {
 												<Text style={{ textAlign: 'center', fontSize: 15, marginRight: 2 }}>
 													{count}
 												</Text>
-												<Icon name='ios-cart' color='blue' type='ionicon' />
+												<Icon name='ios-cart' color='blue' />
 											</TouchableOpacity>
 										</View>
 									);
@@ -1042,7 +1035,7 @@ const Router = React.memo((props) => {
 											}}
 											onPress={() => show_mail_modal()}
 										>
-											<Icon name='md-more' color='blue' type='ionicon' />
+											<Icon name='md-more' color='blue' />
 										</TouchableOpacity>
 									);
 								}

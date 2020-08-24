@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text, Image, TouchableOpacity, ToastAndroid } from 'react-native';
 import { useDispatch } from 'react-redux';
 import AsyncStorage from '@react-native-community/async-storage';
+
 export const Checkout = (props) => {
 	const dispatch = useDispatch();
 
@@ -24,7 +25,7 @@ export const Checkout = (props) => {
 			await AsyncStorage.setItem('active_order', JSON.stringify(arr))
 				.then(() => {
 					console.log('Forwarded to Courier Screen.');
-					props.navigation.navigate('Courier', { data: data });
+					props.navigation.navigate('Account');
 				})
 				.catch((err) => {
 					throw new Error(err);
@@ -39,7 +40,7 @@ export const Checkout = (props) => {
 			await addToActiveOrder(value);
 		}
 	};
-	useEffect(() => {});
+	useEffect(() => { });
 	return (
 		<View style={{ flex: 1, backgroundColor: 'white' }}>
 			<View style={{ padding: 16 }}>
@@ -64,12 +65,12 @@ export const Checkout = (props) => {
 						<Text style={{ fontSize: 15, marginTop: 4 }}>Alamat</Text>
 						<View
 							style={{
-								padding        : 8,
-								borderRadius   : 4,
-								borderWidth    : 1,
-								borderColor    : 'blue',
-								marginTop      : 4,
-								justifyContent : 'center'
+								padding: 8,
+								borderRadius: 4,
+								borderWidth: 1,
+								borderColor: 'blue',
+								marginTop: 4,
+								justifyContent: 'center'
 							}}
 						>
 							<Text>Jlan ululuululululluluuluulullullulululuuluulullullululul</Text>
@@ -84,13 +85,13 @@ export const Checkout = (props) => {
 					onPress={() => confirmBuy(checkoutItems)}
 					activeOpacity={0.5}
 					style={{
-						padding         : 10,
-						borderColor     : '#2296F3',
-						backgroundColor : '#2296F3',
-						borderRadius    : 4,
-						borderWidth     : 1,
-						justifyContent  : 'center',
-						alignItems      : 'center'
+						padding: 10,
+						borderColor: '#2296F3',
+						backgroundColor: '#2296F3',
+						borderRadius: 4,
+						borderWidth: 1,
+						justifyContent: 'center',
+						alignItems: 'center'
 					}}
 				>
 					<Text style={{ fontSize: 17, color: 'white', fontWeight: 'bold' }}>KIRIM</Text>
@@ -102,11 +103,11 @@ export const Checkout = (props) => {
 				<View style={{ height: 200, width: 200 }}>
 					<Image
 						style={{
-							borderRadius : 8,
-							resizeMode   : 'cover',
-							height       : '100%',
-							width        : '100%',
-							flex         : 1
+							borderRadius: 8,
+							resizeMode: 'cover',
+							height: '100%',
+							width: '100%',
+							flex: 1
 						}}
 						source={require('../../../assets/banner/q3.png')}
 					/>

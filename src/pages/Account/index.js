@@ -93,7 +93,7 @@ export const Account = ({ navigation }) => {
 						/>
 					</View>
 					<View style={{ position: 'absolute', right: 10, zIndex: 10 }}>
-						<TouchableOpacity onPress={() => openGallery()} style={{ padding: 10 }}>
+						<TouchableOpacity onPress={() => console.log('test')} style={{ padding: 10 }}>
 							<Icon name='ios-camera' size={35} color='white' type='ionicon' />
 						</TouchableOpacity>
 					</View>

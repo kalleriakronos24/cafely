@@ -40,14 +40,12 @@ const CourierListModal = forwardRef((_, ref) => {
 	};
 	const modalContent = () => {
 		return (
-			<ScrollView style={{ padding: 16, flex: 1 }}>
-				<DirectMessage navigation={_.navigation} data={_.data} />
-			</ScrollView>
+			<DirectMessage navigation={_.navigation} data={_.data} />
 		);
 	};
 	const check = true;
 	return (
-		<Modalize alwaysOpen={300} handlePosition={'inside'} HeaderComponent={Header} ref={combinedRef}>
+		<Modalize alwaysOpen={300} handlePosition={'inside'} adjustToContentHeight={false} HeaderComponent={Header} ref={combinedRef}>
 			{modalContent()}
 		</Modalize>
 	);
@@ -61,12 +59,12 @@ export let Courier = ({ navigation, route }) => {
 	const destination = { latitude: -0.49821, longitude: 117.156735 };
 	const coordinate = [
 		{
-			latitude  : -0.500376,
-			longitude : 117.158409
+			latitude: -0.500376,
+			longitude: 117.158409
 		},
 		{
-			latitude  : -0.49821,
-			longitude : 117.156735
+			latitude: -0.49821,
+			longitude: 117.156735
 		}
 	];
 	const GOOGLE_MAPS_APIKEY = 'AIzaSyCbpEHfzwBGfdSIfbFCODyH_muffddTZvg';
@@ -83,8 +81,8 @@ export let Courier = ({ navigation, route }) => {
 		console.log('mounted!, cart items was deleted');
 	}, []);
 	const origin = {
-		latitude  : -0.500376,
-		longitude : 117.158409
+		latitude: -0.500376,
+		longitude: 117.158409
 	};
 
 	const mapFitToCoordinates = () => {
@@ -94,11 +92,11 @@ export let Courier = ({ navigation, route }) => {
 				'mk1'
 			],
 			{
-				edgePadding : {
-					top    : 150,
-					right  : 150,
-					left   : 150,
-					bottom : 150
+				edgePadding: {
+					top: 150,
+					right: 150,
+					left: 150,
+					bottom: 150
 				}
 			}
 		);
@@ -108,23 +106,23 @@ export let Courier = ({ navigation, route }) => {
 			<View style={{ flex: 1, position: 'relative' }}>
 				<View
 					style={{
-						position : 'absolute',
-						zIndex   : 10,
-						padding  : 16
+						position: 'absolute',
+						zIndex: 10,
+						padding: 16
 					}}
 				>
 					<TouchableHighlight
 						underlayColor='#424D51'
 						onPress={() => navigation.goBack()}
 						style={{
-							padding         : 5,
-							height          : 45,
-							width           : 45,
-							borderRadius    : 30,
-							backgroundColor : 'black',
-							opacity         : 0.7,
-							justifyContent  : 'center',
-							alignItems      : 'center'
+							padding: 5,
+							height: 45,
+							width: 45,
+							borderRadius: 30,
+							backgroundColor: 'black',
+							opacity: 0.7,
+							justifyContent: 'center',
+							alignItems: 'center'
 						}}
 					>
 						<View style={{ zIndex: 10 }}>
@@ -138,10 +136,10 @@ export let Courier = ({ navigation, route }) => {
 					onLayout={() => mapFitToCoordinates()}
 					style={{ height: height - 300 }}
 					initialRegion={{
-						latitude       : data.buyer_coords.latitude,
-						longitude      : data.buyer_coords.longitude,
-						longitudeDelta : 0.005,
-						latitudeDelta  : 0.005
+						latitude: data.buyer_coords.latitude,
+						longitude: data.buyer_coords.longitude,
+						longitudeDelta: 0.005,
+						latitudeDelta: 0.005
 					}}
 					zoomEnabled={true}
 					cacheEnabled={true}
@@ -153,8 +151,8 @@ export let Courier = ({ navigation, route }) => {
 						key={1}
 						description='Lokasi Pengirim'
 						coordinate={{
-							latitude  : d[Object.keys(d)].warung_info.coords.latitude,
-							longitude : d[Object.keys(d)].warung_info.coords.longitude
+							latitude: d[Object.keys(d)].warung_info.coords.latitude,
+							longitude: d[Object.keys(d)].warung_info.coords.longitude
 						}}
 					>
 						<View style={{ padding: 16, flexDirection: 'column', zIndex: 10 }}>
